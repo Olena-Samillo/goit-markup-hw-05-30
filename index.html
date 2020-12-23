@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
     crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -61,7 +62,7 @@
     <section class="hero">
         <div class="hero-container">
                 <h1 class="heading-hero">Эффективные решения для вашего бизнеса</h1>
-                <button class="modal-btn-hero" type="button">Заказать услугу</button>
+                <button data-modal-open class="modal-btn-hero" type="button" >Заказать услугу</button>
         </div>
     </section>
 
@@ -95,12 +96,21 @@
             <ul class="wedo-list-menu">
                 <li class="wedo-list list">
                     <img class="wedo-list-img" src="./images/about/about1.png" alt="пишет код" width="370" height="294">
+                <div class="product-actions">
+                    <p class="article-title">Десктопные приложения</p>
+                </div>
                 </li>
                 <li class="wedo-list list">
                     <img class="wedo-list-img" src="./images/about/about2.png" alt="создает макет" width="370" height="294">
+                <div class="product-actions">
+                    <p class="article-title">Мобильные приложения</p>
+                </div>
                 </li>
                 <li class="wedo-list list">
                     <img class="wedo-list-img" src="./images/about/about3.png" alt="выбирает цветовую палитру" width="370" height="294">
+                <div class="product-actions">
+                    <p class="article-title">Дизайнерские решения</p>
+                </div>
                 </li>
             </ul>
         </div>
@@ -365,5 +375,17 @@
               </div>
             </div>
         </footer>
-        </body>
+      
+       <div class="backdrop is-hidden" data-modal>
+           <div class="modal">
+               <button type="button" class="close-btn" data-modal-close>
+                <svg class="close-btn-icon">
+                <use href="./images/sprite.svg#icon-Vector"></use>
+                </svg>
+                </button>
+           </div>
+
+       </div>
+      <script src="./js/madal.js"></script>
+    </body>
 </html>
