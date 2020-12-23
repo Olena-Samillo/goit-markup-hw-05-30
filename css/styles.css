@@ -329,7 +329,7 @@ body {
 }
 
 .article-title {
-  font-family: Roboto;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;

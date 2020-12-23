@@ -143,7 +143,7 @@
   width: 100%;
   height: 100%;
   padding: 63px 24px;
-  font-family: Roboto;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -162,7 +162,8 @@
   pointer-events: none;
 }
 
-.projects-list:hover .overlay {
+.projects-list:hover .overlay,
+.projects-list:focus .overlay {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
