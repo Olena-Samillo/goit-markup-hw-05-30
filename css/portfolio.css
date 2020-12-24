@@ -119,21 +119,23 @@
 .projects-list:nth-child(3n) {
   margin-right: 0px;
 }
-.projects-link {
-  display: block;
-}
-
-.projects-link:hover {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .projects-list-wrapper {
   position: relative;
   overflow: hidden;
+}
+.projects-link {
+  display: block;
+}
+
+.projects-link:hover .overlay,
+.projects-link:focus .overlay {
+  
+  transform: translateY(0%);
+  border: 1px solid #eeeeee;
+  /* box-sizing: border-box; */
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16); */
 }
 
 .overlay {
@@ -148,24 +150,12 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 1.555;
-  letter-spacing: 0.03em;
-  background-color: rgba(33, 150, 243, 0.9);
-  color: var(--white-color);
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
 
-  transition-property: all;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0s;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
-.projects-list:hover .overlay,
-.projects-list:focus .overlay {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0%);
-}
+
+
